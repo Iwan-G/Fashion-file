@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
-import { Link } from 'react-router-dom';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
@@ -29,7 +28,6 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">Back to result</Link>
           <div className="row top">
             <div className="col-2">
               <img
@@ -49,7 +47,7 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Pirce : ${product.price}</li>
+                <li>Price : RM{product.price.toFixed(2)}</li>
                 <li>
                   Description:
                   <p>{product.description}</p>
@@ -62,7 +60,7 @@ export default function ProductScreen(props) {
                   <li>
                     <div className="row">
                       <div>Price</div>
-                      <div className="price">${product.price}</div>
+                      <div className="price">RM{product.price.toFixed(2)}</div>
                     </div>
                   </li>
                   <li>

@@ -1,8 +1,26 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+
+  users: [
+    {
+      name: 'Iwan',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: true,
+    },
+    {
+      name: 'Koko',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('1234', 8),
+      isAdmin: false,
+    },
+  ],
+
     products: [
       {
-        _id: '1',
-        name: 'Sundress with shiny detail',
+      
+        name: 'Botanica Dress',
         category: 'Dress',
         image: '/images/dress1.jpg',
         price: 120.00,
@@ -12,8 +30,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '2',
-        name: 'Sundress with ruched front',
+        
+        name: 'Whimsical Dress',
         category: 'Dress',
         image: '/images/dress2.jpg',
         price: 100.00,
@@ -23,8 +41,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '3',
-        name: 'Dress in pink ditsy floral',
+       
+        name: 'Pink Floral Dress',
         category: 'Dress',
         image: '/images/dress3.jpg',
         price: 220.00,
@@ -34,8 +52,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '4',
-        name: 'Dress in polka dot',
+       
+        name: 'Polka Me Dress',
         category: 'Dress',
         image: '/images/dress4.jpg',
         price: 78.00,
@@ -45,8 +63,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '5',
-        name: 'Mini dress in yellow polka dot',
+       
+        name: 'Yellow Mellow Dress',
         category: 'Dress',
         image: '/images/dress5.jpg',
         price: 65.00,
@@ -56,8 +74,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '6',
-        name: 'Dress in blue and red spot',
+       
+        name: 'Blue Blue Dress',
         category: 'Dress',
         image: '/images/dress6.jpg',
         price: 139.00,
@@ -67,8 +85,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '7',
-        name: 'White Pants',
+       
+        name: 'White Chino Pants',
         category: 'Pants',
         image: '/images/p4.jpg',
         price: 150.00,
@@ -78,8 +96,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '8',
-        name: 'Olive Pants',
+        
+        name: 'Olive Green Trousers',
         category: 'Pants',
         image: '/images/p5.jpg',
         price: 145.00,
@@ -89,8 +107,8 @@ const data = {
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ipsum ab explicabo possimus, tenetur, veritatis quam porro vitae libero provident hic! Dolores error explicabo exercitationem facere adipisci est ipsa! Iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui dolore perferendis facere ad cumque id culpa quasi necessitatibus similique accusamus, dolorum animi excepturi sed! Cupiditate laboriosam voluptate nihil velit?',
       },
       {
-        _id: '9',
-        name: 'Gray Pants',
+       
+        name: 'Gray Trousers',
         category: 'Pants',
         image: '/images/p6.jpg',
         price: 165.00,
